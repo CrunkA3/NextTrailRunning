@@ -1,0 +1,30 @@
+
+:root {
+    --spacer: 1rem;
+}
+
+.btn-trail {
+    margin: var(--spacer);
+    color: #ccc;
+}
+
+    .btn-trail > .card-img-overlay {
+        background-color: #0000009a;
+    }
+
+
+    .btn-check:checked + .btn-trail,
+    .btn-trail.active,
+    .btn-trail.show,
+    .btn-trail:first-child:active,
+    :not(.btn-check) + .btn-trail:active {
+        color: #fff;
+    }
+
+        .btn-check:checked + .btn-trail > .card-img-overlay,
+        .btn-trail.active > .card-img-overlay,
+        .btn-trail.show > .card-img-overlay,
+        .btn-trail:first-child:active > .card-img-overlay,
+        :not(.btn-check) + .btn-trail:active > .card-img-overlay {
+            background-color: #00000070;
+        }
