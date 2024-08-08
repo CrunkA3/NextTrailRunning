@@ -63,6 +63,11 @@ function setDetails(element) {
     detailsCardHeader.innerHTML = trail.title;
     detailsDistance.innerHTML = trail.distance.toLocaleString() + " km";
     detailsHeight.innerHTML = trail.height.toLocaleString() + " hm";
+
+
+    //download gpx
+    fetch(trail.track)
+    .then(x => console.log(x.text()))
 }
 
 trailRadios.forEach(item => {

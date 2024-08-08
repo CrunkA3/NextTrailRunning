@@ -28,3 +28,10 @@
         :not(.btn-check) + .btn-trail:active > .card-img-overlay {
             background-color: #08429880;
         }
+
+
+#map {
+    /* configure the size of the map */
+    width: 100%;
+    height: 80vh;
+}

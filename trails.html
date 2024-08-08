@@ -6,6 +6,11 @@
     <title>Trails</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="trails.css">
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
@@ -39,10 +44,29 @@
                             </tr>
                         </table>
                     </div>
+
+                    <div id="map"></div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        // initialize Leaflet
+        var map = L.map('map').setView({ lon: 0, lat: 0 }, 2);
+
+        // add the OpenStreetMap tiles
+        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+        }).addTo(map);
+
+        // show the scale bar on the lower left corner
+        L.control.scale({ imperial: true, metric: true }).addTo(map);
+
+        // show a marker on the map
+        L.marker({ lon: 0, lat: 0 }).bindPopup('The center of the world').addTo(map);
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="trails.js"></script>
