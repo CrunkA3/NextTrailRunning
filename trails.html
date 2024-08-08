@@ -31,7 +31,7 @@
 
             <div id="detailsContainer" class="col m-3">
                 <div class="card">
-                    <div class="card-header" id="detailsCardHeader"></div>
+                    <div class="card-header"><span id="detailsCardHeaderText"></span> <a id="detailsCardHeaderLink" class="btn btn-primary" href="#" role="button" target="_blank">zum Veranstalter</a></div>
                     <div class="card-body">
                         <table class="table table-hover">
                             <tr>
@@ -52,11 +52,11 @@
     </div>
     <script>
         // initialize Leaflet
-        var map = L.map('map').setView({ lon: 0, lat: 0 }, 2);
+        const map = L.map('map').setView({ lon: 0, lat: 0 }, 2);
 
         // add the OpenStreetMap tiles
-        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            // L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
         }).addTo(map);
@@ -64,8 +64,9 @@
         // show the scale bar on the lower left corner
         L.control.scale({ imperial: true, metric: true }).addTo(map);
 
-        // show a marker on the map
-        L.marker({ lon: 0, lat: 0 }).bindPopup('The center of the world').addTo(map);
+        //init marker group
+        var markers = L.layerGroup().addTo(map);
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

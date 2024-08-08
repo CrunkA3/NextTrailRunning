@@ -53,21 +53,53 @@ Object.entries(trails).forEach(trail => {
 
 const trailRadios = document.querySelectorAll('[name="trailradio"]');
 
-const detailsCardHeader = document.getElementById("detailsCardHeader");
+const detailsCardHeaderText = document.getElementById("detailsCardHeaderText");
+const detailsCardHeaderLink = document.getElementById("detailsCardHeaderLink");
 const detailsDistance = document.getElementById("detailsDistance");
 const detailsHeight = document.getElementById("detailsHeight");
 
 function setDetails(element) {
     elementId = element.id;
     trail = trails[elementId];
-    detailsCardHeader.innerHTML = trail.title;
+    detailsCardHeaderText.innerHTML = trail.title;
     detailsDistance.innerHTML = trail.distance.toLocaleString() + " km";
     detailsHeight.innerHTML = trail.height.toLocaleString() + " hm";
+    detailsCardHeaderLink.setAttribute("href", trail.raceUrl);
 
 
     //download gpx
     fetch(trail.track)
-    .then(x => console.log(x.text()))
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("GPX-Track konnte nicht geladen werden");
+            }
+
+            return response.text();
+        })
+        .then(xmlText => {
+            const parser = new DOMParser();
+            const gpxTrack = parser.parseFromString(xmlText, 'text/xml');
+            const pointElements = gpxTrack
+                .getElementsByTagName("trkpt");
+
+            let coordinates = []
+
+            for (var i = 0; i < pointElements.length; i++) {
+                let item = pointElements[i];
+                let longitude = item.getAttribute("lon");
+                let latitude = item.getAttribute("lat");
+                coordinates.push([latitude, longitude]);
+            }
+
+            markers.clearLayers();
+
+
+            L.marker({ lon: coordinates[0][1], lat: coordinates[0][0] }).bindPopup('Start').addTo(markers);
+            L.marker({ lon: coordinates[coordinates.length - 1][1], lat: coordinates[coordinates.length - 1][0] }).bindPopup('End').addTo(markers);
+
+            var polyline = L.polyline(coordinates, { color: 'red' }).addTo(markers);
+            map.flyToBounds(polyline.getBounds());
+        });
 }
 
 trailRadios.forEach(item => {
