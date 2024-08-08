@@ -26,5 +26,5 @@
         .btn-trail.show > .card-img-overlay,
         .btn-trail:first-child:active > .card-img-overlay,
         :not(.btn-check) + .btn-trail:active > .card-img-overlay {
-            background-color: #00000070;
+            background-color: #08429880;
         }
