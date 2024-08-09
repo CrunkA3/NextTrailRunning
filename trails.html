@@ -12,51 +12,56 @@
 
 
 </head>
-<body>
-    <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                Trails
-            </a>
-        </div>
-    </nav>
-
-    <div class="container-fluid">
-
-        <div class="row">
-            <div id="trailContainer" class="col-6 col-sm-5 col-md-4 col-lg-3">
-
+<body class="vh-100" style="overflow:hidden">
+    <div class="container-v-flex vh-100">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Trails
+                </a>
             </div>
+        </nav>
 
-            <div id="detailsContainer" class="col m-3">
-                <div class="card">
-                    <div class="card-header"><span id="detailsCardHeaderText"></span> <a id="detailsCardHeaderLink" class="btn btn-primary" href="#" role="button" target="_blank">zum Veranstalter</a></div>
-                    <div class="card-body">
-                        <table class="table table-hover">
-                            <tr>
-                                <th>Strecke</th>
-                                <td id="detailsDistance">0 km</td>
-                            </tr>
-                            <tr>
-                                <th>Höhenmeter</th>
-                                <td id="detailsHeight">0 hm</td>
-                            </tr>
-                        </table>
+        <div class="content-v-flex">
+            <div class="row h-100">
+                <div id="trailContainer" class="col-12 col-md-4 col-lg-3 h-100">
+
+                </div>
+
+                <div id="detailsContainer" class="col m-3">
+                    <div class="card h-100">
+                        <div class="card-header"><span id="detailsCardHeaderText"></span> <a id="detailsCardHeaderLink" class="btn btn-primary float-end" href="#" role="button" target="_blank">zum Veranstalter</a></div>
+                        <div class="card-body h-100">
+                            <div class="container-v-flex h-100">
+
+                                <table class="table table-hover">
+                                    <tr>
+                                        <th>Strecke</th>
+                                        <td id="detailsDistance">0 km</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Höhenmeter</th>
+                                        <td id="detailsHeight">0 hm</td>
+                                    </tr>
+                                </table>
+
+                                <div id="map" class="content-v-flex"></div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div id="map"></div>
                 </div>
             </div>
         </div>
     </div>
+
     <script>
         // initialize Leaflet
         const map = L.map('map').setView({ lon: 0, lat: 0 }, 2);
 
         // add the OpenStreetMap tiles
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            // L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+        // L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
         }).addTo(map);
