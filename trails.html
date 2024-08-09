@@ -16,7 +16,7 @@
     <div class="container-v-flex vh-100">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTrailList" aria-controls="offcanvasTrailList" href="#">
                     <img src="logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                     Trails
                 </a>
@@ -25,10 +25,6 @@
 
         <div class="content-v-flex">
             <div class="row h-100">
-                <div id="trailContainer" class="col-12 col-md-4 col-lg-3 h-100">
-
-                </div>
-
                 <div id="detailsContainer" class="col m-3">
                     <div class="card h-100">
                         <div class="card-header"><span id="detailsCardHeaderText"></span> <a id="detailsCardHeaderLink" class="btn btn-primary float-end" href="#" role="button" target="_blank">zum Veranstalter</a></div>
@@ -51,6 +47,18 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasTrailList" aria-labelledby="offcanvasTrailListLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasTrailListLabel">Trails-Liste</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div id="trailContainer">
+
             </div>
         </div>
     </div>
