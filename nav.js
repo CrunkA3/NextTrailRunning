@@ -109,8 +109,55 @@ function loadTrailData(iTrail) {
                 setDetails(radioButton);
             }
 
+            const ctx = document.createElement("canvas");
+            ctx.id = key + "ElevationChart"
+            ctx.classList.add("position-absolute");
+            ctx.classList.add("bottom-0");
+            ctx.classList.add("start-0");
+            ctx.classList.add("h-50");
+            ctx.classList.add("w-100");
 
+            trailCardOverlay.appendChild(ctx);
 
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: elevations,
+                    datasets: [{
+                        label: 'hm',
+                        data: elevations,
+                        borderWidth: 0,
+                        backgroundColor: '#fff8',
+                        fill: {
+                            target: 'origin'
+                        }
+                    }]
+                },
+                options: {
+                    layout: {
+                        autoPadding: false
+                    },
+                    scales: {
+                        y: {
+                            display: false,
+                            beginAtZero: false
+                        },
+                        x: {
+                            display: false
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    },
+                    elements: {
+                        point: {
+                            pointRadius: 0
+                        }
+                    }
+                }
+            });
 
             trailCardOverlay.removeChild(loadingSpinner);
         });
