@@ -180,6 +180,10 @@ function setDetails(element) {
 
     markers.clearLayers();
 
+    elevationChart.data.labels = trail.elevations;
+    elevationChart.data.datasets[0].data = trail.elevations;
+    elevationChart.update();
+
     const offcanvasTrailList = bootstrap.Offcanvas.getInstance(offCanvasTrailListElement);
     if (offcanvasTrailList !== null) {
         offcanvasTrailList.hide();

@@ -3,6 +3,14 @@
     --spacer: 1rem;
 }
 
+.max-vh-50 {
+    max-height: 50vh;
+}
+
+.max-vh-75 {
+    max-height: 75vh;
+}
+
 .container-v-flex {
     display: flex;
     flex-direction: column;
