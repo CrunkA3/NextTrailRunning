@@ -43,5 +43,14 @@ const trails = {
         raceUrl: "https://kat.utmb.world/de/races/marathon-trail",
         image: "https://res.cloudinary.com/utmb-world/image/upload/q_auto/f_auto/c_fill,g_auto/if_w_gt_1920/c_scale,w_1920/if_end/v1/kat/Race%20Headers/Header_Image_KAT_100_Marathon_Trail_6f3cb4f4bc?_a=ATADJAA0",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/KAT_100_Marathon_Trail_24_0a3819fac3.gpx"
+    },
+    utfs: {
+        title: "Fr&auml;nkische Schweiz",
+        distance: 66,
+        height: 2760,
+        date: "",
+        raceUrl: "https://www.ultratrail-fraenkische-schweiz.de/trailrunning-strecke/ultratrail/",
+        image: "https://www.ultratrail-fraenkische-schweiz.de/wp-content/uploads/2022/08/utfs-felsformation-visual.svg",
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/UTFS-UltraTrail_2024"
     }
 }
