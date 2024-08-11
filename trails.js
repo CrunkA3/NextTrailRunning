@@ -51,6 +51,15 @@ const trails = {
         date: "",
         raceUrl: "https://www.ultratrail-fraenkische-schweiz.de/trailrunning-strecke/ultratrail/",
         image: "https://www.ultratrail-fraenkische-schweiz.de/wp-content/uploads/2022/08/utfs-felsformation-visual.svg",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/UTFS-UltraTrail_2024"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/UTFS-UltraTrail_2024.gpx"
+    },
+    ts42: {
+        title: "TS42 Marathon",
+        distance: 44.7,
+        height: 2293,
+        date: "Juni",
+        raceUrl: "https://www.tschirgant-sky.run/kopie-von-ts16-adventure-1",
+        image: "https://static.wixstatic.com/media/4aedd7_b0a0295ba7f34cbc97c1fd696895ae1b~mv2.jpg?dn=daniko-5178.jpg",
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/ts42%202024.gpx"
     }
 }
