@@ -50,7 +50,7 @@ const trails = {
         height: 2760,
         date: "",
         raceUrl: "https://www.ultratrail-fraenkische-schweiz.de/trailrunning-strecke/ultratrail/",
-        image: "https://www.ultratrail-fraenkische-schweiz.de/wp-content/uploads/2022/08/utfs-felsformation-visual.svg",
+        image: "https://www.ultratrail-fraenkische-schweiz.de/wp-content/uploads/2024/06/Ultratrail-Fraenkische-Schweiz_bizzare-Wetterkapriolen.jpg",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/UTFS-UltraTrail_2024.gpx"
     },
     ts42: {
