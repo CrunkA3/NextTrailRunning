@@ -61,5 +61,14 @@ const trails = {
         raceUrl: "https://www.tschirgant-sky.run/kopie-von-ts16-adventure-1",
         image: "https://static.wixstatic.com/media/4aedd7_b0a0295ba7f34cbc97c1fd696895ae1b~mv2.jpg?dn=daniko-5178.jpg",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/ts42%202024.gpx"
+    },
+    mmNesselwang: {
+        title: "MOUNTAINMAN Nesselwang XL",
+        distance: 42.9,
+        height: 2691,
+        date: "17. Mai 2025",
+        raceUrl: "https://mountainman.de/trailrunning-events/alps/nesselwang/streckendetails/#xl-trail",
+        image: "https://www.sportograf.com/bestof/9690/images/9690_MIRS1LS1_00059.JPG",
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/t804191615_mountainman%20nesselwang.gpx"
     }
 }
