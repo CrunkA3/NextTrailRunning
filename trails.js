@@ -77,7 +77,7 @@ const trails = {
         height: 3100,
         date: "24. Mai 2025",
         raceUrl: "https://www.oetztal.com/de/sommer/events-oetztal/stuiben-trailrun/stuiben-trail-42K.html",
-        image: "https://3d.realitymaps.de/OetztalSommer/shape-img/tour_oetztal_sommer_21323_56748334.jpg",
+        image: "https://img3.oastatic.com/img2/27540139/834x417r/variant.jpg",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/sttr23_geodaten_stuiben_trail_42k.gpx"
     }
 }
