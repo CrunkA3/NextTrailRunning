@@ -39,7 +39,7 @@ const trails = {
         title: "KAT100 Marathon Trail",
         distance: 51,
         height: 3250,
-        date: "Samstag 9. August 2025",
+        date: "9. August 2025",
         raceUrl: "https://kat.utmb.world/de/races/marathon-trail",
         image: "https://res.cloudinary.com/utmb-world/image/upload/q_auto/f_auto/c_fill,g_auto/if_w_gt_1920/c_scale,w_1920/if_end/v1/kat/Race%20Headers/Header_Image_KAT_100_Marathon_Trail_6f3cb4f4bc?_a=ATADJAA0",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/KAT_100_Marathon_Trail_24_0a3819fac3.gpx"
@@ -70,5 +70,14 @@ const trails = {
         raceUrl: "https://mountainman.de/trailrunning-events/alps/nesselwang/streckendetails/#xl-trail",
         image: "https://www.sportograf.com/bestof/9690/images/9690_MIRS1LS1_00059.JPG",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/t804191615_mountainman%20nesselwang.gpx"
+    },
+    stubenTrail42: {
+        title: "Stuiben Trail 42K",
+        distance: 44.1,
+        height: 3100,
+        date: "24. Mai 2025",
+        raceUrl: "https://www.oetztal.com/de/sommer/events-oetztal/stuiben-trailrun/stuiben-trail-42K.html",
+        image: "https://3d.realitymaps.de/OetztalSommer/shape-img/tour_oetztal_sommer_21323_56748334.jpg",
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/sttr23_geodaten_stuiben_trail_42k.gpx"
     }
 }
