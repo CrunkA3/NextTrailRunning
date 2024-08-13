@@ -6,7 +6,8 @@ const trails = {
         date: null,
         raceUrl: "https://www.zugspitz-ultratrail.com/die-rennen/mittenwald-trail/",
         image: "https://www.zugspitz-ultratrail.com/wp-content/uploads/2022/11/ZUT_Landscape.jpg",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/ZUT2024_MittenwaldTrail.gpx"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/ZUT2024_MittenwaldTrail.gpx",
+        albumImages: 12
     },
     trailZugspitzLeutasch: {
         title: "Zugspitz Leutasch Trail",
@@ -78,6 +79,7 @@ const trails = {
         date: "24. Mai 2025",
         raceUrl: "https://www.oetztal.com/de/sommer/events-oetztal/stuiben-trailrun/stuiben-trail-42K.html",
         image: "https://img3.oastatic.com/img2/27540139/834x417r/variant.jpg",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/sttr23_geodaten_stuiben_trail_42k.gpx"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/sttr23_geodaten_stuiben_trail_42k.gpx",
+        albumImages: 12
     }
 }
