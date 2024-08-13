@@ -11,6 +11,12 @@
     max-height: 75vh;
 }
 
+.contain {
+    /* Image is scaled to fit within the container. */
+    /* Aspect ratio IS maintained */
+    object-fit: contain;
+}
+
 .container-v-flex {
     display: flex;
     flex-direction: column;

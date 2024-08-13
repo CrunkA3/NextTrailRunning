@@ -168,6 +168,7 @@ const detailsCardHeaderText = document.getElementById("detailsCardHeaderText");
 const detailsCardHeaderLink = document.getElementById("detailsCardHeaderLink");
 const detailsDistance = document.getElementById("detailsDistance");
 const detailsHeight = document.getElementById("detailsHeight");
+const album = document.getElementById("album");
 const offCanvasTrailListElement = document.getElementById("offcanvasTrailList");
 
 function setDetails(element) {
@@ -188,6 +189,50 @@ function setDetails(element) {
     if (offcanvasTrailList !== null) {
         offcanvasTrailList.hide();
     }
+
+
+    // Fotoalbum
+    album.innerHTML = "";
+    /*
+    
+                                        <div class="carousel-item active">
+                                            <img src="..." class="d-block w-100" alt="...">
+                                        </div>
+    */
+    if (trail.albumImages !== null) {
+        for (var i = 1; i <= trail.albumImages; i++) {
+            let carouselItem = document.createElement("div");
+            let imageUrl = "assets/" + elementId + "/album (" + i + ").webp";
+
+            carouselItem.classList.add("carousel-item");
+            if (i == 1) {
+                carouselItem.classList.add("active");
+            }
+
+            let carouselItemContainer = document.createElement("div");
+            carouselItemContainer.classList.add("d-block");
+            carouselItemContainer.classList.add("w-100");
+            //carouselItemContainer.classList.add("ratio-1x1");
+            carouselItemContainer.classList.add("max-vh-75");
+            carouselItem.style = "background-image: url('" + imageUrl + "'); background-size: cover;";
+
+
+
+            let carouselItemImage = document.createElement("img");
+            carouselItemImage.classList.add("d-block");
+            carouselItemImage.classList.add("w-100");
+            carouselItemImage.classList.add("max-vh-75");
+            carouselItemImage.classList.add("contain");
+            carouselItemImage.src = imageUrl;
+            carouselItemImage.style = "backdrop-filter: blur(10px);";
+            carouselItem.setAttribute("loading", "lazy");
+
+            carouselItem.appendChild(carouselItemContainer);
+            carouselItemContainer.appendChild(carouselItemImage);
+            album.appendChild(carouselItem);
+        }
+    }
+
 
     L.marker({ lon: trail.coordinates[0][1], lat: trail.coordinates[0][0] }).bindPopup('Start').addTo(markers);
     L.marker({ lon: trail.coordinates[trail.coordinates.length - 1][1], lat: trail.coordinates[trail.coordinates.length - 1][0] }).bindPopup('End').addTo(markers);
