@@ -79,18 +79,31 @@ function loadTrailData(iTrail) {
             let elevations = [];
 
             let elevation = 0;
+            let trackPosition = 0; // strecke in Kilometer
+            let lastPosition;
             for (var i = 0; i < pointElements.length; i++) {
                 let item = pointElements[i];
                 let longitude = item.getAttribute("lon");
                 let latitude = item.getAttribute("lat");
+
                 coordinates.push([latitude, longitude]);
+
+                // aktuelle Streckenposition ermitteln
+                let currentPosition = L.latLng(latitude, longitude);
+                if (i > 0) {
+                    trackPosition += (currentPosition.distanceTo(lastPosition)) / 1000;
+                }
 
                 let elevationElement = item.getElementsByTagName("ele");
                 if (elevationElement !== null && elevationElement.length > 0) {
-                    elevation = elevationElement[0].innerHTML;
+                    elevation = {
+                        x: trackPosition,
+                        y: Number.parseFloat(elevationElement[0].innerHTML)
+                    };
                 }
-                elevations.push(elevation);
 
+                elevations.push(elevation);
+                lastPosition = currentPosition;
             }
 
 
@@ -143,7 +156,9 @@ function loadTrailData(iTrail) {
                             beginAtZero: false
                         },
                         x: {
-                            display: false
+                            type: 'linear',
+                            display: false,
+                            bounds: 'data'
                         }
                     },
                     plugins: {
@@ -181,7 +196,7 @@ function setDetails(element) {
 
     markers.clearLayers();
 
-    elevationChart.data.labels = trail.elevations;
+    // Elevation Chart;
     elevationChart.data.datasets[0].data = trail.elevations;
     elevationChart.update();
 
@@ -193,12 +208,6 @@ function setDetails(element) {
 
     // Fotoalbum
     album.innerHTML = "";
-    /*
-    
-                                        <div class="carousel-item active">
-                                            <img src="..." class="d-block w-100" alt="...">
-                                        </div>
-    */
     if (trail.albumImages !== null) {
         for (var i = 1; i <= trail.albumImages; i++) {
             let carouselItem = document.createElement("div");
