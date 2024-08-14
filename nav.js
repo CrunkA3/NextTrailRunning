@@ -223,6 +223,7 @@ function setDetails(element) {
             carouselItemContainer.classList.add("w-100");
             //carouselItemContainer.classList.add("ratio-1x1");
             carouselItemContainer.classList.add("max-vh-75");
+            carouselItemContainer.classList.add("min-vh-50");
             carouselItem.style = "background-image: url('" + imageUrl + "'); background-size: cover;";
 
 
@@ -231,6 +232,7 @@ function setDetails(element) {
             carouselItemImage.classList.add("d-block");
             carouselItemImage.classList.add("w-100");
             carouselItemImage.classList.add("max-vh-75");
+            carouselItemImage.classList.add("min-vh-50");
             carouselItemImage.classList.add("contain");
             carouselItemImage.src = imageUrl;
             carouselItemImage.style = "backdrop-filter: blur(10px);";
