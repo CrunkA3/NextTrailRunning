@@ -43,7 +43,8 @@ const trails = {
         date: "9. August 2025",
         raceUrl: "https://kat.utmb.world/de/races/marathon-trail",
         image: "https://res.cloudinary.com/utmb-world/image/upload/q_auto/f_auto/c_fill,g_auto/if_w_gt_1920/c_scale,w_1920/if_end/v1/kat/Race%20Headers/Header_Image_KAT_100_Marathon_Trail_6f3cb4f4bc?_a=ATADJAA0",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/KAT_100_Marathon_Trail_24_0a3819fac3.gpx"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/KAT_100_Marathon_Trail_24_0a3819fac3.gpx",
+        albumImages: 25
     },
     utfs: {
         title: "Fr&auml;nkische Schweiz",
@@ -52,7 +53,8 @@ const trails = {
         date: "",
         raceUrl: "https://www.ultratrail-fraenkische-schweiz.de/trailrunning-strecke/ultratrail/",
         image: "https://www.ultratrail-fraenkische-schweiz.de/wp-content/uploads/2024/06/Ultratrail-Fraenkische-Schweiz_bizzare-Wetterkapriolen.jpg",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/UTFS-UltraTrail_2024.gpx"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/UTFS-UltraTrail_2024.gpx",
+        albumImages: 20
     },
     ts42: {
         title: "TS42 Marathon",
@@ -61,7 +63,8 @@ const trails = {
         date: "Juni",
         raceUrl: "https://www.tschirgant-sky.run/kopie-von-ts16-adventure-1",
         image: "https://static.wixstatic.com/media/4aedd7_b0a0295ba7f34cbc97c1fd696895ae1b~mv2.jpg?dn=daniko-5178.jpg",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/ts42%202024.gpx"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/ts42%202024.gpx",
+        albumImages: 10
     },
     mmNesselwang: {
         title: "MOUNTAINMAN Nesselwang XL",
