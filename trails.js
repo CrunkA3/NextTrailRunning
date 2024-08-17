@@ -70,7 +70,8 @@ const trails = {
         date: "17. Mai 2025",
         raceUrl: "https://mountainman.de/trailrunning-events/alps/nesselwang/streckendetails/#xl-trail",
         image: "https://www.sportograf.com/bestof/9690/images/9690_MIRS1LS1_00059.JPG",
-        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/t804191615_mountainman%20nesselwang.gpx"
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/t804191615_mountainman%20nesselwang.gpx",
+        albumImages: 9
     },
     stubenTrail42: {
         title: "Stuiben Trail 42K",
