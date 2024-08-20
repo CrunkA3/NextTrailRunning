@@ -85,5 +85,15 @@ const trails = {
         image: "https://img3.oastatic.com/img2/27540139/834x417r/variant.jpg",
         track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/sttr23_geodaten_stuiben_trail_42k.gpx",
         albumImages: 12
+    },
+    schamT: {
+        title: "Schambach Trails",
+        distance: 12.48,
+        height: 348,
+        date: "",
+        raceUrl: "#",
+        image: "https://crunka3.github.io/NextTrailRunning/assets/schamT/album%20(1).webp",
+        track: "https://crunka3.github.io/NextTrailRunning/assets/tracks/Schambach%20Trails.gpx",
+        albumImages: 1
     }
 }
